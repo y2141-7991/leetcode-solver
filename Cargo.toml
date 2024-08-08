@@ -1,0 +1,9 @@
+workspace = { members = ["add_two_num", "integer-to-words"] }
+[package]
+name = "leetcode-solver"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
