@@ -1,4 +1,3 @@
-
 fn minimum_pushes(word: String) -> i32 {
     let mut count = vec![0; 26];
     for w in word.chars() {

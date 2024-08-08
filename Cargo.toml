@@ -1,4 +1,4 @@
-workspace = { members = ["add_two_num", "integer-to-words"] }
+workspace = { members = ["minimum-number-of-pushes-to-type-word", "integer-to-words"] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"
