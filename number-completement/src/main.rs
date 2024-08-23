@@ -5,12 +5,10 @@ fn main() {
     for i in bin_num.chars() {
         if i == '0' {
             result += "1"
-        }
-        else {
+        } else {
             result += "0"
         }
     }
-    let number =  i32::from_str_radix(&result, 2).unwrap();
+    let number = i32::from_str_radix(&result, 2).unwrap();
     println!("{}", number)
-
 }
