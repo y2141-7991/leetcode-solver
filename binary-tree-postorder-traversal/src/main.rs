@@ -1,5 +1,5 @@
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct TreeNode {
     pub val: i32,
@@ -12,7 +12,7 @@ impl TreeNode {
         TreeNode {
             val,
             left: None,
-            right: None
+            right: None,
         }
     }
 }
@@ -26,8 +26,7 @@ fn postorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         ans.sort();
         ans.reverse();
         ans
-    }
-    else {
+    } else {
         vec![]
     }
 }
@@ -37,5 +36,8 @@ fn main() {
     root.left = Some(Rc::new(RefCell::new(TreeNode::new(2))));
     root.right = Some(Rc::new(RefCell::new(TreeNode::new(3))));
 
-    println!("{:?}", postorder_traversal(Some(Rc::new(RefCell::new(root)))))
+    println!(
+        "{:?}",
+        postorder_traversal(Some(Rc::new(RefCell::new(root))))
+    )
 }

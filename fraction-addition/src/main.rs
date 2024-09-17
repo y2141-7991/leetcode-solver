@@ -1,5 +1,3 @@
-
-
 fn main() {
     let decimal = 0.5;
     let mut numerator = decimal as i32;

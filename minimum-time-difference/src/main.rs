@@ -15,9 +15,15 @@ impl Solution {
         println!("{:?}", minutes);
         let mut min_diff: i32 = i32::MAX;
         for i in 0..minutes.len() - 1 {
-            min_diff = *vec![min_diff, minutes[i+1] - minutes[i]].iter().min().unwrap();
+            min_diff = *vec![min_diff, minutes[i + 1] - minutes[i]]
+                .iter()
+                .min()
+                .unwrap();
         }
-        min_diff = *vec![min_diff, 1440 + minutes[0] - minutes[minutes.len()-1]].iter().min().unwrap();
+        min_diff = *vec![min_diff, 1440 + minutes[0] - minutes[minutes.len() - 1]]
+            .iter()
+            .min()
+            .unwrap();
         min_diff
     }
 
