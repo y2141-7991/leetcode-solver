@@ -1,0 +1,6 @@
+[package]
+name = "uncommon-words-from-2-sentences"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
