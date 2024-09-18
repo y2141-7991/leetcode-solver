@@ -1,4 +1,18 @@
-workspace = { members = ["minimum-number-of-pushes-to-type-word", "integer-to-words", "lemon-change", "maximum-distance", "number-completement", "sudoku-solver", "binary-tree-postorder-traversal", "validate-binary-tree", "minimum-time-difference", "fraction-addition", "median-of-two-sorted-arrays", "uncommon-words-from-2-sentences"] }
+workspace = { members = [
+    "minimum-number-of-pushes-to-type-word",
+    "integer-to-words",
+    "lemon-change",
+    "maximum-distance",
+    "number-completement",
+    "sudoku-solver",
+    "binary-tree-postorder-traversal",
+    "validate-binary-tree",
+    "minimum-time-difference",
+    "fraction-addition",
+    "median-of-two-sorted-arrays",
+    "uncommon-words-from-2-sentences",
+    "largest-number"
+    ] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"
