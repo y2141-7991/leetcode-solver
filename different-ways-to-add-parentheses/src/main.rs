@@ -27,7 +27,7 @@ impl Solution {
     }
 
     fn compute(left: i32, right: i32, operator: &str) -> i32 {
-        println!("{}, {}", left, right);
+        println!("{}, {}, {}", left, right, operator);
         match operator {
             "+" => return left + right,
             "-" => return left - right,
