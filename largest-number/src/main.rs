@@ -1,4 +1,3 @@
-
 struct Solution;
 
 impl Solution {
@@ -22,7 +21,7 @@ impl Solution {
 }
 
 fn main() {
-    let nums = vec![3,30,34,5,9];
+    let nums = vec![3, 30, 34, 5, 9];
     let a = Solution::largest_number(nums.clone());
     println!("{:?}", a)
 }
