@@ -1,0 +1,6 @@
+[package]
+name = "check-if-array-pairs-are-division-by-k-1497"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

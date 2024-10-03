@@ -12,7 +12,7 @@ workspace = { members = [
     "median-of-two-sorted-arrays",
     "uncommon-words-from-2-sentences",
     "largest-number"
-    , "different-ways-to-add-parentheses", "shortest-palindrome", "rank-transform-of-an-array"] }
+    , "different-ways-to-add-parentheses", "shortest-palindrome", "rank-transform-of-an-array", "check-if-array-pairs-are-division-by-k-1497", "make-sum-divisible-by-p-1590"] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"
