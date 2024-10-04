@@ -1,0 +1,6 @@
+[package]
+name = "divide-players-into-teams-of-equal-skill-2491"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
