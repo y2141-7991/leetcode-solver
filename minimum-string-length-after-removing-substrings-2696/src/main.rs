@@ -8,7 +8,7 @@ impl Solution {
         let mut sub = s;
         sub = sub.replace("AB", "");
         sub = sub.replace("CD", "");
-        
+
         Self::min_length(sub)
     }
 }

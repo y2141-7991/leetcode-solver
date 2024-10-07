@@ -20,8 +20,7 @@ impl Solution {
 }
 
 fn main() {
-    let arr = vec![1,2,3,4,5,10,6,7,8,9];
+    let arr = vec![1, 2, 3, 4, 5, 10, 6, 7, 8, 9];
     let k = 5;
     Solution::can_arrange(arr, k);
-
 }

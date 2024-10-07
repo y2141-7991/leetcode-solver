@@ -11,7 +11,7 @@ impl Solution {
             s1_count[(s1.chars().nth(i).unwrap() as i32 - 97) as usize] += 1;
             s2_count[(s2.chars().nth(i).unwrap() as i32 - 97) as usize] += 1;
         }
-        
+
         for n in 0..(s2.len() - s1.len()) {
             if s1_count == s2_count {
                 return true;
@@ -19,9 +19,8 @@ impl Solution {
             s2_count[(s2.chars().nth(n).unwrap() as i32 - 97) as usize] -= 1;
             s2_count[(s2.chars().nth(n + s1.len()).unwrap() as i32 - 97) as usize] += 1;
         }
-        
 
-        return s1_count == s2_count
+        return s1_count == s2_count;
     }
 }
 

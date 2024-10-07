@@ -10,9 +10,9 @@ impl Solution {
 
         let r = i64_sum_nums % p as i64;
         if r == 0 {
-            return 0
-        } 
- 
+            return 0;
+        }
+
         let mut prefix_mod: HashMap<i64, i64> = HashMap::new();
         prefix_mod.insert(0, -1);
         let mut prefix_sum: i64 = 0;
@@ -29,7 +29,7 @@ impl Solution {
             }
 
             prefix_mod.insert(current_mod, n as i64);
-        };
+        }
         println!("{:?}", min_length);
         if min_length < nums.len() as i64 {
             return min_length as i32;
@@ -40,8 +40,7 @@ impl Solution {
 }
 
 fn main() {
-    let nums = vec![6,3,5,2];
+    let nums = vec![6, 3, 5, 2];
     let p = 9;
-    println!("{:?}",Solution::min_subarray(nums, p));
-    
+    println!("{:?}", Solution::min_subarray(nums, p));
 }

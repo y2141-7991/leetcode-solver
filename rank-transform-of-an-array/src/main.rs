@@ -23,13 +23,13 @@ impl Solution {
             if let Some(o) = hash_rank_array.get(&i) {
                 res.push(*o);
             }
-        } 
+        }
 
         res
     }
 }
 
 fn main() {
-    let a = vec![1,1,1,1];
+    let a = vec![1, 1, 1, 1];
     println!("{:?}", Solution::array_rank_transform(a));
 }

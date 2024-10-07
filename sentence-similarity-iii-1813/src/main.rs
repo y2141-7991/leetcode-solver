@@ -10,7 +10,7 @@ impl Solution {
         let mut end_s1 = (split_s1.len() - 1) as isize;
         let mut end_s2 = (split_s2.len() - 1) as isize;
         let mut start = 0;
-        
+
         while start < split_s1.len() && split_s1[start] == split_s2[start] {
             start += 1;
         }
