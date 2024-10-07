@@ -17,7 +17,10 @@ workspace = { members = [
     "rank-transform-of-an-array",
     "check-if-array-pairs-are-division-by-k-1497",
     "make-sum-divisible-by-p-1590",
-    "divide-players-into-teams-of-equal-skill-2491"] }
+    "divide-players-into-teams-of-equal-skill-2491",
+    "permutation-in-strings-567",
+    "sentence-similarity-iii-1813",
+    "minimum-string-length-after-removing-substrings-2696"] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"
