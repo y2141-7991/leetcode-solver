@@ -1,0 +1,6 @@
+[package]
+name = "minimum-number-of-swap-to-make-the-string-balanced-1963"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
