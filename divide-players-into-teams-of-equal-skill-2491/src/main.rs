@@ -13,7 +13,7 @@ impl Solution {
             if list_skill[n] + list_skill[skill.len() - 1 - n] != total_num {
                 return -1;
             }
-            a += (list_skill[n] * list_skill[skill.len() - 1 - n])
+            a += list_skill[n] * list_skill[skill.len() - 1 - n]
         }
         a
     }

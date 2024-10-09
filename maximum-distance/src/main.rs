@@ -10,7 +10,7 @@ fn max_distance(arrays: Vec<Vec<i32>>) -> i32 {
             .max()
             .unwrap();
 
-        let mut max_dis1 = vec![
+        let max_dis1 = vec![
             (min_num - arrays[i + 1][arrays[i + 1].len() - 1]).abs(),
             (max_num - arrays[i + 1][0]).abs(),
         ]
