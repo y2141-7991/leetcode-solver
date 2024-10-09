@@ -6,8 +6,7 @@ impl Solution {
         for c in s.chars().into_iter() {
             if c == '[' {
                 ans += 1;
-            }
-            else if ans > 0 {
+            } else if ans > 0 {
                 ans -= 1
             }
         }
