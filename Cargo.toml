@@ -20,7 +20,7 @@ workspace = { members = [
     "divide-players-into-teams-of-equal-skill-2491",
     "permutation-in-strings-567",
     "sentence-similarity-iii-1813",
-    "minimum-string-length-after-removing-substrings-2696", "minimum-number-of-swap-to-make-the-string-balanced-1963"] }
+    "minimum-string-length-after-removing-substrings-2696", "minimum-number-of-swap-to-make-the-string-balanced-1963", "minimum-add-to-make-parenthese-valid-921"] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"
