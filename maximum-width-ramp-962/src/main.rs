@@ -1,4 +1,3 @@
-
 struct Solution;
 
 impl Solution {
@@ -32,8 +31,7 @@ impl Solution {
     }
 }
 
-
 fn main() {
-    let a = vec![9,8,1,0,1,9,4,0,4,1];
+    let a = vec![9, 8, 1, 0, 1, 9, 4, 0, 4, 1];
     println!("{}", Solution::max_width_ramp(a));
 }
