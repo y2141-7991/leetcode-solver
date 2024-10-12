@@ -11,7 +11,7 @@ type Chairs = BinaryHeap<Reverse<i32>>;
 impl Solution {
     const EXPECT_TIMES_DIMENSIONS: &'static str =
         "Elements in `times` should be contain exactly two elements.";
-    
+
     pub fn smallest_chair(times: Vec<Vec<i32>>, target_friend: i32) -> i32 {
         // Initial setup.
         let mut arrivals = Self::generate_arrivals(times);
@@ -19,17 +19,16 @@ impl Solution {
         let mut old_chairs = Chairs::new();
         let mut new_chair = 1i32;
         let mut departing = match arrivals.pop() {
-            Some(Reverse(ArrivalWrapper(friend))) => Some(DepartureWrapper {
-                friend,
-                chair: 0,
-            }),
+            Some(Reverse(ArrivalWrapper(friend))) => Some(DepartureWrapper { friend, chair: 0 }),
             None => panic!("Should have at least one friend arriving"),
         };
 
         // Early exit if needed.
         if departing
             .expect("Should have at least one friend arriving")
-            .friend.id == target_friend
+            .friend
+            .id
+            == target_friend
         {
             return 0;
         }
@@ -51,7 +50,7 @@ impl Solution {
                 None => {
                     let increment = new_chair + 1;
                     std::mem::replace(&mut new_chair, increment)
-                },
+                }
             };
             // Return the answer if the arrival is the target friend.
             if arriving.id == target_friend {
@@ -80,8 +79,8 @@ impl Solution {
     fn generate_arrivals(times: Vec<Vec<i32>>) -> Arrivals {
         let mut heap = BinaryHeap::with_capacity(times.len());
         for (id, vector) in (0i32..).zip(times) {
-            let [arrival, departure] = <[i32; 2]>::try_from(vector)
-                .expect(Self::EXPECT_TIMES_DIMENSIONS);
+            let [arrival, departure] =
+                <[i32; 2]>::try_from(vector).expect(Self::EXPECT_TIMES_DIMENSIONS);
             heap.push(Reverse(ArrivalWrapper(Friend {
                 id,
                 arrival,
@@ -125,7 +124,7 @@ impl Ord for ArrivalWrapper {
 #[derive(Debug, Default, Clone, Copy, Hash)]
 struct DepartureWrapper {
     friend: Friend,
-    chair: i32
+    chair: i32,
 }
 
 impl PartialEq for DepartureWrapper {
@@ -144,7 +143,6 @@ impl PartialOrd for DepartureWrapper {
 
 impl Ord for DepartureWrapper {
     fn cmp(&self, other: &Self) -> Ordering {
-        (self.friend.departure, self.friend.id)
-            .cmp(&(other.friend.departure, other.friend.id))
+        (self.friend.departure, self.friend.id).cmp(&(other.friend.departure, other.friend.id))
     }
 }

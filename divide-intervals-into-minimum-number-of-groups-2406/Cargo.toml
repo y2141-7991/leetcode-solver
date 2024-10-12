@@ -1,0 +1,6 @@
+[package]
+name = "divide-intervals-into-minimum-number-of-groups-2406"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
