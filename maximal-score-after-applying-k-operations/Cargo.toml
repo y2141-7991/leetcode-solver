@@ -1,0 +1,6 @@
+[package]
+name = "maximal-score-after-applying-k-operations"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
