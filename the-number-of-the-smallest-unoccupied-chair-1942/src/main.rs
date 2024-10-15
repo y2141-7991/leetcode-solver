@@ -146,3 +146,7 @@ impl Ord for DepartureWrapper {
         (self.friend.departure, self.friend.id).cmp(&(other.friend.departure, other.friend.id))
     }
 }
+
+fn main() {
+    
+}
