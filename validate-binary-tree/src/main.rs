@@ -41,7 +41,7 @@ fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
 fn main() {
     let a: u32 = 2147483648 + 1;
     println!("{}", a);
-    let mut root = TreeNode::new(2147483647);
+    let root = TreeNode::new(2147483647);
     // root.left = Some(Rc::new(RefCell::new(TreeNode::new(1))));
     // root.right = Some(Rc::new(RefCell::new(TreeNode::new(5))));
     println!("{}", is_valid_bst(Some(Rc::new(RefCell::new(root)))))

@@ -82,6 +82,6 @@ fn main() {
         vec!['.', '8', '.', '4', '.', '.', '.', '.', '.'],
     ];
 
-    let a = solve(&mut board);
+    let _ = solve(&mut board);
     println!("{:?}", board);
 }
