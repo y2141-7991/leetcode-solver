@@ -23,7 +23,12 @@ workspace = { members = [
     "minimum-string-length-after-removing-substrings-2696",
     "minimum-number-of-swap-to-make-the-string-balanced-1963",
     "minimum-add-to-make-parenthese-valid-921",
-    "maximum-width-ramp-962", "the-number-of-the-smallest-unoccupied-chair-1942", "divide-intervals-into-minimum-number-of-groups-2406", "smallest-range-covering-elements-from-k-lists-632", "maximal-score-after-applying-k-operations-2530"] }
+    "maximum-width-ramp-962",
+    "the-number-of-the-smallest-unoccupied-chair-1942",
+    "divide-intervals-into-minimum-number-of-groups-2406",
+    "smallest-range-covering-elements-from-k-lists-632",
+    "maximal-score-after-applying-k-operations-2530",
+    "seperate-black-and-white-balls-2938"] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"

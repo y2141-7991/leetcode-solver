@@ -22,7 +22,7 @@ impl Solution {
 }
 
 fn main() {
-    let a = vec![10,10,10,10,10];
-    let b = 50;
+    let a = vec![1,10,3,3,3];
+    let b = 3;
     println!("{}", Solution::max_kelements(a, b));
 }
