@@ -2,6 +2,13 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_swap(num: i32) -> i32 {
+        // for a in 0..num.clone().to_string().len() {
+        //     let mut num_str = num.to_string();
+        //     let b = num_str.remove(a);
+
+        //     println!("{:?}", num_str);
+        //     println!("{:?}", b);
+        // }
         let num_str = num.to_string();
 
         let mut p1 = 0;
