@@ -1,0 +1,6 @@
+[package]
+name = "find-kth-bit-in-binary-string-1545"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
