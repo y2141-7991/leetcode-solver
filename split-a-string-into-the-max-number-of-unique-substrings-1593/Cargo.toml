@@ -1,0 +1,6 @@
+[package]
+name = "split-a-string-into-the-max-number-of-unique-substrings-1593"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
