@@ -13,16 +13,15 @@ impl Solution {
             println!("{}", _v);
             println!("{:?}", heap);
             result += _v as i64;
-            heap.push((_v+2)/3);
+            heap.push((_v + 2) / 3);
             println!("{:?}", heap);
-            
         }
         result
     }
 }
 
 fn main() {
-    let a = vec![1,10,3,3,3];
+    let a = vec![1, 10, 3, 3, 3];
     let b = 3;
-        println!("{}", Solution::max_kelements(a, b));
-    }
+    println!("{}", Solution::max_kelements(a, b));
+}

@@ -7,8 +7,7 @@ impl Solution {
         for i in s.chars().into_iter() {
             if i == '0' {
                 swaps += long as i64;
-            }
-            else {
+            } else {
                 long += 1;
             }
         }

@@ -6,8 +6,7 @@ impl Solution {
         for a in expression.bytes() {
             if a == b',' {
                 continue;
-            }
-            else if a == b')' {
+            } else if a == b')' {
                 let mut values = vec![];
                 while let Some(top) = stack.pop() {
                     if top == b'(' {
@@ -20,39 +19,30 @@ impl Solution {
                         let res = Self::evaluate(operator, values);
                         if res {
                             stack.push(b't');
-                        }
-                        else {
+                        } else {
                             stack.push(b'f');
                         }
-                    },
-                    None => {},
+                    }
+                    None => {}
                 }
-            }
-            else {
+            } else {
                 stack.push(a);
             }
         }
         match stack.pop() {
-            Some(top) => {top == b't'},
-            None => false
+            Some(top) => top == b't',
+            None => false,
         }
     }
 
     fn evaluate(operator: u8, values: Vec<u8>) -> bool {
         match operator {
-            b'!' => {
-                values[0] == b'f'
-            },
-            b'&' => {
-                !values.into_iter().any(|v| v == b'f')
-            },
-            b'|' => {
-                values.into_iter().any(|v| v == b't')
-            }
-            _ => false
+            b'!' => values[0] == b'f',
+            b'&' => !values.into_iter().any(|v| v == b'f'),
+            b'|' => values.into_iter().any(|v| v == b't'),
+            _ => false,
         }
     }
-
 }
 
 fn main() {

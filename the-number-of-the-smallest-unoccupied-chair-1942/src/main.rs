@@ -147,6 +147,4 @@ impl Ord for DepartureWrapper {
     }
 }
 
-fn main() {
-    
-}
+fn main() {}
