@@ -20,15 +20,15 @@ impl TreeNode {
 struct Solution;
 
 impl Solution {
-    pub fn kth_largest_level_sum(root: Option<Rc<RefCell<TreeNode>>>, k: i32) -> i32 {
-        let nums: Vec<i32>= Vec::new();
-        fn helpers(nums: Vec<Option<Rc<RefCell<TreeNode>>>>, mut vec_nums: Vec<i32>) -> Vec<i32> {
+    pub fn kth_largest_level_sum(root: Option<Rc<RefCell<TreeNode>>>, k: i32) -> i64 {
+        let nums: Vec<i64>= Vec::new();
+        fn helpers(nums: Vec<Option<Rc<RefCell<TreeNode>>>>, mut vec_nums: Vec<i64>) -> Vec<i64> {
             let mut sub_nodes: Vec<Option<Rc<RefCell<TreeNode>>>> = Vec::new();
-            let mut val: i32 = 0;
+            let mut val: i64 = 0;
             for n in nums {
                 if let Some(n) = n {
                     let val_num = n.borrow();
-                    val += val_num.val;
+                    val += val_num.val as i64;
                     sub_nodes.extend(vec![val_num.right.clone(), val_num.left.clone()]);
                 }
 
@@ -40,6 +40,9 @@ impl Solution {
             helpers(sub_nodes, vec_nums) 
         }
         let mut res = helpers(vec![root], nums);
+        if res.len() < k as usize{
+            return -1;
+        }
         res.sort_by(|a, b| b.cmp(a));
         res[(k as usize) - 1]
 
