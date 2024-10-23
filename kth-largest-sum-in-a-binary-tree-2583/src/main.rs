@@ -1,5 +1,7 @@
 use std::cell::RefCell;
 use std::rc::Rc;
+use std::cmp::Reverse;
+use std::collections::{VecDeque, BinaryHeap};
 
 #[derive(Debug)]
 struct TreeNode {
@@ -46,6 +48,50 @@ impl Solution {
         res.sort_by(|a, b| b.cmp(a));
         res[(k as usize) - 1]
 
+    }
+
+    pub fn kth_largest_level_sum1(root: Option<Rc<RefCell<TreeNode>>>, k: i32) -> i64 {
+        let root = match root {
+            Some(node) => node,
+            None => {return -1},
+        };
+        let mut queue = VecDeque::new();
+        queue.push_back(root);
+
+        let mut heap = BinaryHeap::new();
+
+        while !queue.is_empty() {
+            let mut level_sum: i64 = 0;
+            let length = queue.len();
+            for _ in 0..length {
+                if let Some(node) = queue.pop_front() {
+                    let node = node.borrow();
+                    level_sum += node.val as i64;
+                    if let Some(left) = node.left.clone() {
+                        queue.push_back(left);
+                    }
+                    if let Some(right) = node.right.clone() {
+                        queue.push_back(right);
+                    }
+                }
+            }
+            heap.push(Reverse(level_sum));
+            if heap.len() > k as usize {
+                heap.pop();
+            }
+        }
+        if heap.len() < k as usize {
+            return -1;
+        }
+        let result = match heap.pop() {
+            Some(top) => {
+                top.0
+            },
+            None => {
+                -1
+            }
+        };
+        result
     }
 }
 
