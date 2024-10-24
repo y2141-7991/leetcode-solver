@@ -28,7 +28,7 @@ workspace = { members = [
     "divide-intervals-into-minimum-number-of-groups-2406",
     "smallest-range-covering-elements-from-k-lists-632",
     "maximal-score-after-applying-k-operations-2530",
-    "seperate-black-and-white-balls-2938", "longest-happy-string-1405", "maximum-swap-670", "count-number-of-maximum-bitwise-OR-subsets-2044", "find-kth-bit-in-binary-string-1545", "parsing-a-boolean-expression-1106", "split-a-string-into-the-max-number-of-unique-substrings-1593", "kth-largest-sum-in-a-binary-tree-2583", "cousins-in-binary-tree-ii-2641"] }
+    "seperate-black-and-white-balls-2938", "longest-happy-string-1405", "maximum-swap-670", "count-number-of-maximum-bitwise-OR-subsets-2044", "find-kth-bit-in-binary-string-1545", "parsing-a-boolean-expression-1106", "split-a-string-into-the-max-number-of-unique-substrings-1593", "kth-largest-sum-in-a-binary-tree-2583", "cousins-in-binary-tree-ii-2641", "flip-equivalent-binary-trees-951"] }
 [package]
 name = "leetcode-solver"
 version = "0.1.0"
