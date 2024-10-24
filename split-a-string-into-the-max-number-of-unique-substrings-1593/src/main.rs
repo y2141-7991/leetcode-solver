@@ -18,7 +18,7 @@ impl Solution {
         while !s.is_empty() {
             let mut breakpoint = (b.trailing_zeros() + 1) as usize;
             println!("{:b}, {}", b, breakpoint,);
-            if breakpoint > u32::BITS.try_into().unwrap() {
+            if breakpoint >= u32::BITS.try_into().unwrap() {
                 breakpoint = 31;
             }
             b >>= breakpoint;
