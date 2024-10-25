@@ -1,0 +1,6 @@
+[package]
+name = "remove-sub-folders-from-the-filesystem-1233"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
