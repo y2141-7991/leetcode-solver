@@ -1,0 +1,6 @@
+[package]
+name = "longest-square-streak-in-array-2501"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

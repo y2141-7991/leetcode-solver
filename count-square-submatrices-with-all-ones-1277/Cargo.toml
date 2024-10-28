@@ -1,0 +1,6 @@
+[package]
+name = "count-square-submatrices-with-all-ones-1277"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
