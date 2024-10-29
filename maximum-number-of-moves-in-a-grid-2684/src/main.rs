@@ -14,6 +14,7 @@ impl Solution {
             dp[i][0] = true;
             queue.push((i as i32, 0, 0));
         }
+
         while let Some(top) = queue.pop() {
             let (row, col, count) = (top.0, top.1, top.2);
             res = res.max(count);
