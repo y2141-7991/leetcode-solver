@@ -1,13 +1,14 @@
 struct Solution;
 
+const DIRS: &[i32] = &[-1, 0, 1];
 impl Solution {
     pub fn max_moves(grid: Vec<Vec<i32>>) -> i32 {
-        const DIRS: &[i32] = &[-1, 0, 1];
+        
         let mut queue: Vec<(i32, i32, i32)> = vec![];
         let m = grid.len();
         let n = grid[0].len();
 
-        let mut dp = vec![vec![false; m]; n];
+        let mut dp = vec![vec![false; n]; m];
         let mut res = 0;
         for i in 0..m {
             dp[i][0] = true;
@@ -25,13 +26,14 @@ impl Solution {
                     && !dp[new_row as usize][new_col as usize]
                     && grid[row as usize][col as usize] < grid[new_row as usize][new_col as usize]
                 {
+                    dp[new_row as usize][new_col as usize] = true;
                     queue.push((new_row, new_col, count + 1));
                 }
             }
         }
-
         println!("{:?}", dp);
-        0
+
+        res
     }
 }
 
