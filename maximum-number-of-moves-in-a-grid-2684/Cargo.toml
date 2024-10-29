@@ -1,0 +1,6 @@
+[package]
+name = "maximum-number-of-moves-in-a-grid-2684"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
