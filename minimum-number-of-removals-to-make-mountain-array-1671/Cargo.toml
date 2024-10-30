@@ -1,0 +1,6 @@
+[package]
+name = "minimum-number-of-removals-to-make-mountain-array-1671"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
