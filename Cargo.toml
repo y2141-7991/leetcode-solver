@@ -43,7 +43,11 @@ workspace = { members = [
     "count-square-submatrices-with-all-ones-1277",
     "longest-square-streak-in-array-2501",
     "maximum-number-of-moves-in-a-grid-2684",
-    "minimum-number-of-removals-to-make-mountain-array-1671", "minimum-total-distance-travaled-2463", "delete-characters-to-make-fancy-string-1957", "circular-sentence-2490"] }
+    "minimum-number-of-removals-to-make-mountain-array-1671",
+    "minimum-total-distance-travaled-2463",
+    "delete-characters-to-make-fancy-string-1957",
+    "circular-sentence-2490",
+    "rotate-string-796"] }
 
 [package]
 name = "leetcode-solver"

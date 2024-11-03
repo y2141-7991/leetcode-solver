@@ -20,7 +20,10 @@ impl TreeNode {
 struct Solution;
 
 impl Solution {
-    pub fn flip_equiv(root1: Option<Rc<RefCell<TreeNode>>>, root2: Option<Rc<RefCell<TreeNode>>>) -> bool {
+    pub fn flip_equiv(
+        root1: Option<Rc<RefCell<TreeNode>>>,
+        root2: Option<Rc<RefCell<TreeNode>>>,
+    ) -> bool {
         let (node1, node2) = match (root1, root2) {
             (Some(node1), Some(node2)) => (node1, node2),
             (None, None) => return true,
@@ -30,9 +33,10 @@ impl Solution {
         if node1.borrow().val != node2.borrow().val {
             return false;
         }
-        return Self::flip_equiv(node1.borrow().left.clone(), node2.borrow().left.clone()) && Self::flip_equiv(node1.borrow().right.clone(), node2.borrow().right.clone()) ||
-        Self::flip_equiv(node1.borrow().left.clone(), node2.borrow().right.clone()) && Self::flip_equiv(node1.borrow().right.clone(), node2.borrow().left.clone());
-
+        return Self::flip_equiv(node1.borrow().left.clone(), node2.borrow().left.clone())
+            && Self::flip_equiv(node1.borrow().right.clone(), node2.borrow().right.clone())
+            || Self::flip_equiv(node1.borrow().left.clone(), node2.borrow().right.clone())
+                && Self::flip_equiv(node1.borrow().right.clone(), node2.borrow().left.clone());
     }
 }
 

@@ -19,6 +19,12 @@ impl Solution {
 }
 
 fn main() {
-    let a = vec!["/a".to_string(),"/a/b".to_string(),"/c/d".to_string(),"/c/d/e".to_string(),"/c/f".to_string()];
+    let a = vec![
+        "/a".to_string(),
+        "/a/b".to_string(),
+        "/c/d".to_string(),
+        "/c/d/e".to_string(),
+        "/c/f".to_string(),
+    ];
     println!("{:?}", Solution::remove_subfolders(a))
 }

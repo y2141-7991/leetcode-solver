@@ -20,16 +20,15 @@ impl Solution {
             queue.push_back((m, 0i64));
             for i in (0..m).rev() {
                 prefix += (robot[i] - factory[j][0]).abs() as i64;
-                while !queue.is_empty() && queue[0].0 > i + factory[j][1] as usize{
+                while !queue.is_empty() && queue[0].0 > i + factory[j][1] as usize {
                     queue.pop_front();
                 }
-                while !queue.is_empty() && queue.back().unwrap().1 >= dp[i][j+1] - prefix {
+                while !queue.is_empty() && queue.back().unwrap().1 >= dp[i][j + 1] - prefix {
                     queue.pop_back();
                 }
-                queue.push_back((i, dp[i][j+1] - prefix));
+                queue.push_back((i, dp[i][j + 1] - prefix));
                 dp[i][j] = queue[0].1 + prefix;
             }
-
         }
         // println!("{:?}", dp);
         dp[0][0]
@@ -37,7 +36,7 @@ impl Solution {
 }
 
 fn main() {
-    let robot = vec![0,4,6];
-    let factory = vec![vec![2,2],vec![6,2]];
+    let robot = vec![0, 4, 6];
+    let factory = vec![vec![2, 2], vec![6, 2]];
     println!("{}", Solution::minimum_total_distance(robot, factory))
 }

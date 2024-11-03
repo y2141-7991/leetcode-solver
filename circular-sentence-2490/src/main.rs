@@ -9,12 +9,12 @@ impl Solution {
             return false;
         }
 
-        for i in 1..n-1 {
-            if chars[i] == ' ' && chars[i-1] != chars[i+1] {
+        for i in 1..n - 1 {
+            if chars[i] == ' ' && chars[i - 1] != chars[i + 1] {
                 return false;
             }
         }
-        
+
         true
     }
 }

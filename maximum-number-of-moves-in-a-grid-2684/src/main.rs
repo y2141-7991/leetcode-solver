@@ -3,7 +3,6 @@ struct Solution;
 const DIRS: &[i32] = &[-1, 0, 1];
 impl Solution {
     pub fn max_moves(grid: Vec<Vec<i32>>) -> i32 {
-        
         let mut queue: Vec<(i32, i32, i32)> = vec![];
         let m = grid.len();
         let n = grid[0].len();

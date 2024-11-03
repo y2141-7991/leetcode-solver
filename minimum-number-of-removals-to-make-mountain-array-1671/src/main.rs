@@ -1,8 +1,6 @@
-
 struct Solution;
 
 impl Solution {
-
     fn lis_length(v: &Vec<i32>) -> Vec<i32> {
         let mut lis = vec![v[0]];
         let mut lis_len = vec![1; v.len()];
@@ -10,8 +8,7 @@ impl Solution {
         for i in 1..v.len() {
             if v[i] > *lis.last().unwrap() {
                 lis.push(v[i]);
-            }
-            else {
+            } else {
                 let index = lis.partition_point(|&x| x < v[i]);
                 lis[index] = v[i];
             }
@@ -39,10 +36,9 @@ impl Solution {
         }
         removals
     }
-
 }
 
 fn main() {
-    let a = vec![4,5,13,17,1,7,6,11,2,8,10,15,3,9,12,14,16];
+    let a = vec![4, 5, 13, 17, 1, 7, 6, 11, 2, 8, 10, 15, 3, 9, 12, 14, 16];
     println!("{:?}", Solution::minimum_mountain_removals(a));
 }
