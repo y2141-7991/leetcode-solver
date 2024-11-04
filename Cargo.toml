@@ -47,7 +47,7 @@ workspace = { members = [
     "minimum-total-distance-travaled-2463",
     "delete-characters-to-make-fancy-string-1957",
     "circular-sentence-2490",
-    "rotate-string-796"] }
+    "rotate-string-796", "remove-duplicates-from-sorted-list-83"] }
 
 [package]
 name = "leetcode-solver"

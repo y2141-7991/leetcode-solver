@@ -1,0 +1,6 @@
+[package]
+name = "remove-duplicates-from-sorted-list-83"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
