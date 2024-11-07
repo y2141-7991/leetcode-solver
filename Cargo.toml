@@ -47,7 +47,7 @@ workspace = { members = [
     "minimum-total-distance-travaled-2463",
     "delete-characters-to-make-fancy-string-1957",
     "circular-sentence-2490",
-    "rotate-string-796", "remove-duplicates-from-sorted-list-83", "string-compression-iii-3163"] }
+    "rotate-string-796", "remove-duplicates-from-sorted-list-83", "string-compression-iii-3163", "minimum-number-of-changes-to-make-binary-string-beautiful-2914", "find-if-array-can-be-sorted-3011", "largest-combination-with-bitwise-AND-greater-than-zero-2275"] }
 
 [package]
 name = "leetcode-solver"
