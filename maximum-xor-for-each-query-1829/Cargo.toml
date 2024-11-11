@@ -1,0 +1,6 @@
+[package]
+name = "maximum-xor-for-each-query-1829"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
